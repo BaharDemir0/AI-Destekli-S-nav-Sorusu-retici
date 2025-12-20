@@ -1,0 +1,190 @@
+# AI Sınav Sorusu Üretici - Kurulum ve Kullanım
+
+## 📦 Gerekli Kütüphaneler
+
+### requirements.txt
+```
+anthropic>=0.18.0
+streamlit>=1.31.0
+```
+
+## 🚀 Kurulum
+
+### 1. Python Kurulumu
+Python 3.8+ gereklidir. [Python İndir](https://www.python.org/downloads/)
+
+### 2. Kütüphaneleri Yükle
+```bash
+pip install -r requirements.txt
+```
+
+veya tek tek:
+```bash
+pip install anthropic streamlit
+```
+
+## 🎮 Kullanım
+
+### Streamlit Versiyonu (Web Arayüzü) - ÖNERİLEN
+```bash
+streamlit run sinav_uretici_streamlit.py
+```
+Tarayıcınızda otomatik açılacaktır: `http://localhost:8501`
+
+### Tkinter Versiyonu (Masaüstü)
+```bash
+python sinav_uretici_tkinter.py
+```
+
+## 🔑 API Key Nasıl Alınır?
+
+### Anthropic Claude API
+1. [console.anthropic.com](https://console.anthropic.com/) adresine git
+2. Hesap oluştur (ücretsiz $5 kredi)
+3. API Keys bölümünden yeni key oluştur
+4. Uygulamada "API Key" kısmına yapıştır
+
+**Önemli:** API key'i kimseyle paylaşma!
+
+### Alternatif: Ortam Değişkeni (Daha Güvenli)
+```bash
+# Windows
+set ANTHROPIC_API_KEY=your-api-key-here
+
+# Mac/Linux
+export ANTHROPIC_API_KEY=your-api-key-here
+```
+
+## 🎯 Özellikler
+
+### ✅ Mevcut Özellikler
+- 8 farklı ders (Matematik, Fen, Türkçe, vb.)
+- 5-12. sınıf arası destek
+- 3 zorluk seviyesi (Kolay, Orta, Zor)
+- Çoktan seçmeli ve açık uçlu sorular
+- Cevap anahtarı
+- Dosya olarak indirme
+- Modern ve kullanıcı dostu arayüz
+
+### 🔮 Gelecek Özellikler (İsteğe Bağlı)
+- [ ] PDF export
+- [ ] Soru havuzu kaydetme
+- [ ] Öğrenci performans takibi
+- [ ] Grafik/görsel içeren sorular
+- [ ] Çoklu dil desteği
+
+## 🛠️ Teknik Detaylar
+
+### Kullanılan Teknolojiler
+- **Python 3.8+**
+- **Streamlit**: Modern web arayüzü
+- **Tkinter**: Yerleşik GUI kütüphanesi
+- **Anthropic Claude API**: AI soru üretimi
+- **Threading**: Asenkron işlemler
+
+### API Kullanımı
+Model: `claude-sonnet-4-20250514`
+- Her soru üretimi ~1000-4000 token
+- Ortalama süre: 3-10 saniye
+
+## 📊 Proje Raporu İçin
+
+### Problem
+Öğretmenlerin özelleştirilmiş sınav soruları hazırlamak için harcadıkları zaman ve öğrencilerin konuya uygun soru bulmakta çektikleri zorluk.
+
+### Çözüm
+Yapay zeka destekli otomatik soru üretimi sistemi ile:
+- Saniyeler içinde soru oluşturma
+- Sınıf seviyesine göre otomatik zorluk ayarı
+- Türk eğitim müfredatına uygun içerik
+- Öğretmenlere zaman kazandırma
+- Öğrencilere sınırsız pratik imkanı
+
+### Katkılar
+- ⏰ Zaman tasarrufu (manuel ~2 saat → AI ile ~1 dakika)
+- 🎯 Kişiselleştirilmiş öğrenme
+- 📚 Müfredata uygun içerik
+- 🚀 Eğitimde AI farkındalığı
+
+## 🐛 Hata Giderme
+
+### "ModuleNotFoundError: No module named 'anthropic'"
+```bash
+pip install anthropic
+```
+
+### "API key not found"
+API key'inizi kontrol edin veya ortam değişkenine ekleyin.
+
+### Streamlit açılmıyor
+```bash
+streamlit --version  # Kurulu olduğunu kontrol et
+streamlit run sinav_uretici_streamlit.py --server.port 8502
+```
+
+### Tkinter çalışmıyor (Linux)
+```bash
+sudo apt-get install python3-tk
+```
+
+## 📝 Örnek Kullanım
+
+### Girdi
+```
+Ders: Matematik
+Sınıf: 7
+Konu: Oran Orantı
+Soru Sayısı: 3
+Zorluk: Orta
+Soru Tipi: Çoktan Seçmeli
+```
+
+### Çıktı
+```
+SORU 1:
+Bir sınıfta 12 kız, 8 erkek öğrenci vardır. 
+Kızların erkeklere oranı kaçtır?
+
+A) 2/3
+B) 3/2
+C) 4/5
+D) 5/4
+
+CEVAP: B) 3/2
+```
+
+## 🎓 Proje Geliştirme Fikirleri
+
+1. **Veritabanı Entegrasyonu**
+   - SQLite ile soru havuzu
+   - Geçmiş sorular ve performans
+
+2. **PDF Export**
+   - ReportLab ile PDF oluşturma
+   - Profesyonel sınav formatı
+
+3. **Kullanıcı Sistemi**
+   - Öğretmen/Öğrenci rolleri
+   - Sınıf yönetimi
+
+4. **Mobil Uygulama**
+   - Flutter veya React Native
+   - Cross-platform destek
+
+5. **İleri AI Özellikleri**
+   - Görsel soru üretimi
+   - Ses tanıma ile soru girişi
+   - Öğrenci cevaplarını değerlendirme
+
+## 📄 Lisans
+Bu proje eğitim amaçlıdır ve özgürce kullanılabilir.
+
+## 🤝 Katkıda Bulunma
+Pull request'ler kabul edilir. Büyük değişiklikler için önce issue açın.
+
+## 📧 İletişim
+Sorularınız için: [GitHub Issues](https://github.com)
+
+---
+
+**🎓 Yapay Zeka Destekli Eğitim - Python & Claude 4**
