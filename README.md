@@ -1,6 +1,6 @@
 # AI Destekli Sınav Sorusu Üretici - Kurulum ve Kullanım
 
-Bu Proje **İskenderun Teknik Üniversitesi Mühendislikte Bilgisayar Uygulamaları I** dersi için geliştirilmiştir.
+> Bu Proje *İskenderun Teknik Üniversitesi Mühendislikte Bilgisayar Uygulamaları I* dersi için geliştirilmiştir.
 
 ## 📦 Gerekli Kütüphaneler
 
