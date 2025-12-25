@@ -1,5 +1,7 @@
 # AI Destekli Sınav Sorusu Üretici - Kurulum ve Kullanım
 
+Bu Proje **İskenderun Teknik Üniversitesi Mühendislikte Bilgisayar Uygulamaları I** dersi için geliştirilmiştir.
+
 ## 📦 Gerekli Kütüphaneler
 
 ### requirements.txt
@@ -38,7 +40,7 @@ pip install streamlit
 
 ### Modern CustomTkinter Versiyonu (Masaüstü) - ÖNERİLEN
 ```bash
-python sinav_uretici_modern.py
+python main.py
 ```
 ✨ **Özellikler:**
 - Ultra modern arayüz
@@ -298,10 +300,10 @@ ctk.set_default_color_theme("blue")  # green veya dark-blue yapın
 Bu proje eğitim amaçlıdır ve MIT LICENSE ile korunmuştur.
 
 ## 🤝 Katkıda Bulunma
-Pull request'ler kabul edilir. Büyük değişiklikler için önce issue açın.
+Bahar DEMİR - Mert İsa CANIMOĞLU
 
 ## 📧 İletişim
-Sorularınız için: GitHub Issues
+Sorularınız için: bahardemir270@gmail.com / mert.cnmoglu@gmail.com
 
 ---
 
